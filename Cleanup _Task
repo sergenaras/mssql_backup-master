@@ -1,0 +1,9 @@
+System32 içerisindeki forfilex.exe ile windows üzerinde pek çok işlem yapabiliriz. 
+Bunlardan birine örnek olarak belirli aralıklarla bir dosyadaki eski tarihli verilerin silinmesi örnek verilebilir.
+
+Bunun için task schedular içerisinden yeni bir görev oluşturup eylemler kısmında yukarıdaki dosyayı kullanarak ve 
+bağımsız değişkenler kısmında aşağıdaki parametrelerle 7 gün öncesinde oluşturulmuş tüm kayıtları siliyor. 
+
+/d parametresinin yanındaki rakam değiştirilerek zaman aralığı değiştirilebilir.
+
+/p "C:\SQLBackups" /s /d -7 /c "cmd /c del @file"
